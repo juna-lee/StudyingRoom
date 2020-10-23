@@ -189,7 +189,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #4B3049;
+  color: #000000;
   font-family: "Poppins", sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -570,10 +570,10 @@ ul {
   padding: 18px 36px;
   border-radius: 5px;
   background-color: transparent;
-  border: 1px solid #B08EAD;
+  border: 1px solid #DDDDDD;
   font-size: 15px;
   font-weight: 700;
-  color: #B08EAD;
+  color: #717171;
   text-transform: uppercase;
   font-weight: 400;
   -webkit-transition: 0.5s;
@@ -582,7 +582,7 @@ ul {
 
 /* line 56, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_button.scss */
 .btn_3:hover {
-  background-color: #B08EAD;
+  background-color: #DDDDDD;
   color: #fff;
 }
 
