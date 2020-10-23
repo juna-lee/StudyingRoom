@@ -31,4 +31,9 @@ public class STDController {
 	public void register() {
 		log.info("Controller : register.............");
 	}
+	
+	@GetMapping("notice")
+	public void Board() {
+		log.info("Controller : Std_notice....공지사항.......");
+	}
 }
