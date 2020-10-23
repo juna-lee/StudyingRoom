@@ -6,13 +6,10 @@
     <section class="page-add">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="page-breadcrumb">
-                        <h2>회원가입<span>.</span></h2>
+                        <h2 style="text-align:center;">회원가입<span>.</span></h2>
                     </div>
-                </div>
-                <div class="col-lg-8">
-                    <img src="img/add.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -23,50 +20,31 @@
     <div class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-6 offset-lg-3">
                     <form action="#" class="contact-form">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="First Name">
+                        	<div class="col-lg-12">
+                                <input type="text" placeholder="ID">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Last Name">
+                                <input type="text" placeholder="성">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="이름">
                             </div>
                             <div class="col-lg-12">
+                                <input type="password" placeholder="비밀번호">
+                                <input type="password" placeholder="비밀번호 확인">
+                                <input type="text" placeholder="phone">
                                 <input type="email" placeholder="E-mail">
-                                <input type="text" placeholder="Subject">
-                                <textarea placeholder="Message"></textarea>
                             </div>
-                            <div class="col-lg-12 text-right">
+                            <div class="col-lg-12">
+                            </div>
+                            <div class="col-lg-12 text-center">
                                 <button type="submit">Send message</button>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="col-lg-3 offset-lg-1">
-                    <div class="contact-widget">
-                        <div class="cw-item">
-                            <h5>Location</h5>
-                            <ul>
-                                <li>1525 Awesome Lane, </li>
-                                <li>Los Angeles, CA</li>
-                            </ul>
-                        </div>
-                        <div class="cw-item">
-                            <h5>Phone</h5>
-                            <ul>
-                                <li>+1 (603)535-4592</li>
-                                <li>+1 (603)535-4556</li>
-                            </ul>
-                        </div>
-                        <div class="cw-item">
-                            <h5>E-mail</h5>
-                            <ul>
-                                <li>contact@violetstore.com</li>
-                                <li>www.violetstore.com</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="map">
