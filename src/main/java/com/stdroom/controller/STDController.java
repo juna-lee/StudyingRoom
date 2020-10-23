@@ -31,4 +31,13 @@ public class STDController {
 	public void register() {
 		log.info("Controller : register.............");
 	}
+	
+	@GetMapping("reviews")
+	public void reviews() {
+		log.info("Controller : review................");
+	}
+	@GetMapping("review")
+	public void review() {
+		log.info("Controller : review................");
+	}
 }
