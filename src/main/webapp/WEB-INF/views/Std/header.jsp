@@ -70,7 +70,7 @@
                             </ul>
                         </li>
                         <li><a href="/product-page.html">공지사항</a></li>
-                        <li><a href="/check-out.html">리뷰</a></li>
+                        <li><a href="reviews">리뷰</a></li>
                         <li><a href="/contact.html">Q&A</a></li>
                     </ul>
                 </nav>
