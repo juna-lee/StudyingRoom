@@ -31,6 +31,10 @@ public class STDController {
 	public void register() {
 		log.info("Controller : register.............");
 	}
+	@GetMapping("login")
+	public void login() {
+		log.info("Controller : login.............");
+	}
 	
 	@GetMapping("reviews")
 	public void reviews() {
