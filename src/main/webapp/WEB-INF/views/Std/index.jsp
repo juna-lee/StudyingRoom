@@ -51,7 +51,7 @@
 					<div class="effect-wrap">
 						<figure class="effect6">
 							<img
-								src="/img/tedslider-1.jpg"
+								src="/img/personalseat.jpg"
 								alt="">
 							<figcaption>
 								<h3>

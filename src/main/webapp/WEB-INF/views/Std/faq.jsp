@@ -1,7 +1,10 @@
 <%@include file="header.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/css/courses.css?after" type="text/css">
+<link rel="stylesheet" href="/css/courses.css" type="text/css">
+<link rel="stylesheet" href="/css/course.css" type="text/css">
+
+
 <!-- Courses -->
 <div class="courses">
 	<div class="container">
@@ -87,6 +90,15 @@
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="paging">
+					<a href=""><i class="fa  fa-angle-double-left"></i></a> <a href=""><i
+						class="fa fa-angle-left"></i></a> <a href="" class="active">1</a> <a
+						href="">2</a> <a href="">3</a> <a href="">4</a> <a href="">5</a> <a
+						href=""><i class="fa fa-angle-right"></i></a> <a href=""><i
+						class="fa  fa-angle-double-right"></i></a>
+
 				</div>
 			</div>
 		</div>

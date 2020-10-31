@@ -89,19 +89,19 @@
                 <div class="col-md-4">
                     <div class="header-item">
                         <img src="/img/icons/delivery.png" alt="">
-                        <p>Free shipping on orders over $30 in USA</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-lg-center">
                     <div class="header-item">
                         <img src="/img/icons/voucher.png" alt="">
-                        <p>20% Student Discount</p>
+                        <p>20% 할인 정기권 발급 받기</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-xl-right">
                     <div class="header-item">
                     <img src="/img/icons/sales.png" alt="">
-                    <p>30% off on dresses. Use code: 30OFF</p>
+                    <p>즐겨찾기 추가하고 30% 할인 쿠폰 받기</p>
                 </div>
                 </div>
             </div>
