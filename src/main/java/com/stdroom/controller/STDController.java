@@ -27,6 +27,9 @@ public class STDController {
 		log.info("Controller : index............");
 	}
 	
+	
+	
+	
 	@GetMapping("terms")
 	public void terms() {
 		log.info("Controller : terms.............");
@@ -41,6 +44,9 @@ public class STDController {
 		log.info("Controller : login.............");
 	}
 	
+	
+	
+	
 	@GetMapping("reviews")
 	public void reviews() {
 		log.info("Controller : review................");
@@ -50,23 +56,27 @@ public class STDController {
 		log.info("Controller : review................");
 
 	}
-
-	@GetMapping("notice")
-	public void Board() {
-		log.info("Controller : Std_notice....공지사항.......");
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@GetMapping("reviewWrite")
 	public void reviewWrite() {
 		log.info("Controller : reviewWrite...............");
 	}
+
+	
+	@GetMapping("notice")
+	public void notice() {
+		log.info("Controller : notice...........");
+	}
+	
+	
+	@GetMapping("qna")
+	public void qna() {
+		log.info("Controller :qna...................");
+	}
+	@GetMapping("faq")
+	public void faq() {
+		log.info("Controller : faq.................");
+	}
+	
+	
+	
 }

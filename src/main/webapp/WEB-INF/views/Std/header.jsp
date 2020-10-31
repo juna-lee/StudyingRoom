@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="headerbody">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -46,7 +46,7 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="index"><img src="/img/logo.png" alt=""></a>
+                    <a href="index"><img src="/img/tedlogo.png" alt=""></a>
                 </div>
                 <div class="header-right">
                     <img src="/img/icons/search.png" alt="" class="search-trigger">
@@ -63,15 +63,20 @@
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a class="active" href="index">홈</a></li>
-                        <li><a href="/categories.html">예약하기</a>
+                        <li><a href="reservation">예약하기</a>
                             <ul class="sub-menu">
                                 <li><a href="product-page.html">개인좌석</a></li>
                                 <li><a href="shopping-cart.html">스터디룸</a></li>
                             </ul>
                         </li>
-                        <li><a href="/product-page.html">공지사항</a></li>
+                        <li><a href="notice">공지사항</a></li>
                         <li><a href="reviews">리뷰</a></li>
-                        <li><a href="/contact.html">Q&A</a></li>
+                        <li><a href="qna">Q&A</a>
+                         <ul class="sub-menu">
+                                <li><a href="qna">Q&A</a></li>
+                                <li><a href="faq">자주하는질문</a></li>
+                            </ul>
+                         </li>
                     </ul>
                 </nav>
             </div>
