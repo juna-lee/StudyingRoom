@@ -27,6 +27,10 @@ public class STDController {
 		log.info("Controller : index............");
 	}
 	
+	@GetMapping("terms")
+	public void terms() {
+		log.info("Controller : terms.............");
+	}
 	@GetMapping("register")
 	public void register() {
 		log.info("Controller : register.............");
