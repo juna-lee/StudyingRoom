@@ -51,4 +51,18 @@ public class STDController {
 	public void Board() {
 		log.info("Controller : Std_notice....공지사항.......");
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@GetMapping("reviewWrite")
+	public void reviewWrite() {
+		log.info("Controller : reviewWrite...............");
+	}
 }

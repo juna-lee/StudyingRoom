@@ -1,7 +1,8 @@
 <%@include file="header.jsp"%>
- <link rel="stylesheet" href="/css/courses.css" type="text/css">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <link rel="stylesheet" href="/css/courses.css?after" type="text/css">
 	<!-- Courses -->
-
 	<div class="courses">
 		<div class="container">
 			<div class="row courses_row">
@@ -84,7 +85,8 @@
 
 			<div class="row">
 				<div class="col">
-					<div class="load_more_button"><a href="#">load more</a></div>
+					<div class="load_more_button" style=""><a href="#">더보기</a></div>
+					<div class="load_more_button float_right " style="float:right;"><a href="reviewWrite">리뷰작성</a></div>
 				</div>
 			</div>
 		</div>
