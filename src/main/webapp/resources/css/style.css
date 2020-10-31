@@ -743,9 +743,6 @@ body{padding-top:104px;}
 	line-height: 38px;
 }
 
-/*---------------------
-	Login
------------------------*/
 
 /*---------------------
   Latest Product
@@ -1992,6 +1989,7 @@ body{padding-top:104px;}
 	padding-bottom: 94px;
 }
 
+
 .contact-form input {
 	width: 100%;
 	font-size: 12px;
@@ -2005,14 +2003,11 @@ body{padding-top:104px;}
 
 .contact-form textarea {
 	width: 100%;
-	border-bottom: 2px solid #E7EBED;
+	border: 2px solid #E7EBED;
 	font-size: 12px;
 	font-weight: 600;
 	color: #838383;
-	border-left: 0;
 	height: 215px;
-	border-right: 0;
-	border-top: 0;
 	resize: none;
 	margin-bottom: 40px;
 }
@@ -2029,6 +2024,8 @@ body{padding-top:104px;}
 	cursor: pointer;
 	text-transform: uppercase;
 }
+
+
 
 .contact-widget .cw-item {
 	margin-bottom: 50px;
@@ -2055,6 +2052,54 @@ body{padding-top:104px;}
 .map iframe {
 	width: 100%;
 }
+/*===========================
+ terms
+=============================*/
+
+input[id="termchecks"] {
+	display: none;
+}
+
+input[id="termchecks"]+label em {
+	display: inline-block;
+	width: 24.3px;
+	height: 23.93px;
+	margin-right: 5px;
+	background:
+		url("https://static.nid.naver.com/images/ui/myinfo/pc_check_off_24.png")
+		0 0 no-repeat;
+	vertical-align: middle;
+}
+
+input[id="termchecks"]:checked+label em {
+	background:
+		url("https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png");
+}
+
+input[id="termcheck1"], input[id="termcheck2"], input[id="termcheck3"],
+	input[id="termcheck4"] {
+	display: none;
+}
+
+input[id="termcheck1"]+label em, input[id="termcheck2"]+label em, input[id="termcheck3"]+label em,
+	input[id="termcheck4"]+label em {
+	display: inline-block;
+	width: 20px;
+	height: 20.2px;
+	margin-right: 5px;
+	background:
+		url("https://static.nid.naver.com/images/ui/myinfo/pc_chcek_off_s_20.png")
+		0 0 no-repeat;
+	vertical-align: middle;
+}
+
+input[id="termcheck1"]:checked+label em, input[id="termcheck2"]:checked+label em,
+	input[id="termcheck3"]:checked+label em, input[id="termcheck4"]:checked+label em
+	{
+	background:
+		url("https://static.nid.naver.com/images/ui/myinfo/pc_chcek_on_s_20.png");
+}
+
 
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
 
@@ -2183,6 +2228,9 @@ body{padding-top:104px;}
 	.contact-form {
 		margin-bottom: 40px;
 	}
+	.terms-form {
+		margin-bottom: 40px;
+	}
 	.logo-section {
 		padding: 70px 0;
 	}
@@ -2231,6 +2279,9 @@ body{padding-top:104px;}
 		margin-bottom: 30px;
 	}
 	.contact-form {
+		margin-bottom: 40px;
+	}
+	.terms-form {
 		margin-bottom: 40px;
 	}
 	.newslatter-form form button {
@@ -2371,6 +2422,7 @@ body{padding-top:104px;}
 	.header-info {
 		padding: 10px 0;
 	}
+<<<<<<< HEAD
 }
 .float_right{
 	float: right;
@@ -2385,4 +2437,76 @@ body{padding-top:104px;}
 }
 .float_left{
 	float: left;
+=======
+	
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700,900');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.effect-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.effect6 {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid #d2d2d2;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+.effect6 img {
+    width: 100%;
+  /*  filter: saturate(10%);*/
+    transition: all 0.3s ease;
+}
+.effect6 figcaption {
+    position: absolute;
+    top: 0; right:0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    opacity:0;
+    transition: all 0.3s ease;
+    transform: translatex(75%) rotate(180deg);
+}
+
+.effect6 figcaption:before {
+    content:'';
+    width: 150px; height: 150px;
+    background: #fff; 
+    border-radius: 50%;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.effect6 figcaption h3 {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+.effect6 figcaption em {
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.effect6:hover img {
+    opacity: 0.1;
+}
+.effect6:hover figcaption {
+    transform: translatex(0px) rotate(0deg);
+    opacity: 1;
+>>>>>>> a50c354202279d063f772eb2d45ac7292e5c73bd
 }

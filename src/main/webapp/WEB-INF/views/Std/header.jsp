@@ -57,7 +57,7 @@
                     </a>
                 </div>
                 <div class="user-access">
-                    <a href="register">회원가입</a>
+                    <a href="terms">회원가입</a>
                     <a href="login" class="in">로그인</a>
                 </div>
                 <nav class="main-menu mobile-menu">
