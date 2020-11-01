@@ -1,85 +1,55 @@
 <%@include file="header.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <script>
+    if(${reviewtrue}){
+    	alert("리뷰 작성 성공");
+    }else{
+    	alert("리뷰 작성을 실패하였습니다..");
+    }
+    </script>
  <link rel="stylesheet" href="/css/courses.css?after" type="text/css">
+ <link rel="stylesheet" href="/css/course.css?after" type="text/css">
 	<!-- Courses -->
 	<div class="courses">
 		<div class="container">
 			<div class="row courses_row">
-
+				<c:forEach items="${list}" var="list">
 				<!-- Course -->
 				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="/img/course_1.jpg" alt=""></div>
+					<div class="course" style="padding-bottom: 100px;">
+						<div class="course_image"  style="height:100%; width:100%;"><img src="/resources/upload/${list.filename}" alt=""></div>
 						<div class="course_body">
-							<div class="course_title"><a href="review">Vocabulary</a></div>
+							<div class="course_title"><a href="review?bno=${list.bno}">${list.title}</a></div>
 							<div class="course_info">
 								<ul>
-									<li><a href="#">Sarah Parker</a></li>
-									<li><a href="#">English</a></li>
+									<li><a href="#">권혁성</a></li>
 								</ul>
 							</div>
 							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
+								<p>${list.content}</p>
 							</div>
 						</div>
 						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark course_free trans_200"><a href="#">Free</a></div>
+							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>${list.readcnt }</span></div>
+							<div class="course_rating ml-auto">
+							<c:forEach begin="1" end="${list.rating}" var="stars">
+							<span class="rating_r intro_rating rating_r_${list.rating}">
+							<i style="margin-right:0;"></i>
+							</span>
+							</c:forEach>
+							<c:if test="${list.rating != 5}">
+							<c:forEach begin="1" end="${5 - list.rating}" var="stars2">
+							<span class="rating_r">
+							<i style="margin-right:0;"></i>
+							</span>
+							</c:forEach>
+							</c:if>
+							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="/img/course_10.jpg" alt=""></div>
-						<div class="course_body">
-							<div class="course_title"><a href="review">Vocabulary</a></div>
-							<div class="course_info">
-								<ul>
-									<li><a href="#">Sarah Parker</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
-							</div>
-						</div>
-						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark course_free trans_200"><a href="#">Free</a></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="/img/course_11.jpg" alt=""></div>
-						<div class="course_body">
-							<div class="course_title"><a href="review">Vocabulary</a></div>
-							<div class="course_info">
-								<ul>
-									<li><a href="#">Sarah Parker</a></li>
-									<li><a href="#">Spanish</a></li>
-								</ul>
-							</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
-							</div>
-						</div>
-						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark course_free trans_200"><a href="#">Free</a></div>
-						</div>
-					</div>
-				</div>
-
-
+				</c:forEach>
 
 			</div>
 

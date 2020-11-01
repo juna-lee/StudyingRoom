@@ -2422,7 +2422,6 @@ input[id="termcheck1"]:checked+label em, input[id="termcheck2"]:checked+label em
 	.header-info {
 		padding: 10px 0;
 	}
-<<<<<<< HEAD
 }
 .float_right{
 	float: right;
@@ -2437,8 +2436,6 @@ input[id="termcheck1"]:checked+label em, input[id="termcheck2"]:checked+label em
 }
 .float_left{
 	float: left;
-=======
-	
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700,900');
@@ -2508,5 +2505,4 @@ body {
 .effect6:hover figcaption {
     transform: translatex(0px) rotate(0deg);
     opacity: 1;
->>>>>>> a50c354202279d063f772eb2d45ac7292e5c73bd
 }

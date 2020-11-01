@@ -4,5 +4,10 @@
 <!-- 위의태그를 입력시켜야 <mapper>태그를 쓸 수 있다. -->
 
 <mapper namespace="com.stdroom.mapper.STDMapper">
-
+<insert id="reviewWrite">
+	insert into team_review (bno,rating,content,title,filename) values(team_review_bno_seq.nextval,#{rating},#{content},#{title},#{filename})
+</insert>
+<select id="reviewList" resultType="com.stdroom.domain.ReviewVO">
+	select * from team_review where bno > 0 order by bno desc
+</select>
 </mapper>

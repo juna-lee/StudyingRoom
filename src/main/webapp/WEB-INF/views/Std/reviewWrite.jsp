@@ -41,48 +41,66 @@
             review.value = review.value.substr(0,400);
         }
     });
-
-    //저장 전송전 필드 체크 이벤트 리스너
-    document.querySelector('#save').addEventListener('click', function(e){
-        //별점 선택 안했으면 메시지 표시
-        if(rating.rate == 0){
-            rating.showMessage('rate');
-            return false;
-        }
-        //리뷰 5자 미만이면 메시지 표시
-        if(document.querySelector('.review_textarea').value.length < 5){
-            rating.showMessage('review');
-            return false;
-        }
-        //폼 서밋
-    });
+	function Gosubmit(){
+		 Rating.prototype.showMessage = function(type){//경고메시지 표시
+			    switch(type){
+			        case 'rate':
+			            //안내메시지 표시
+			            document.querySelector('.review_rating .warning_msg').style.display = 'block';
+			            //지정된 시간 후 안내 메시지 감춤
+			            setTimeout(function(){
+			                document.querySelector('.review_rating .warning_msg').style.display = 'none';
+			            },1000);            
+			            break;
+			        case 'review':
+			            //안내메시지 표시
+			            document.querySelector('.review_contents .warning_msg').style.display = 'block';
+			            //지정된 시간 후 안내 메시지 감춤
+			            setTimeout(function(){
+			                document.querySelector('.review_contents .warning_msg').style.display = 'none';
+			            },1000);    
+			            break;
+			        case 'filename':
+			            //안내메시지 표시
+			            document.querySelector('.review_filename .warning_msg').style.display = 'block';
+			            //지정된 시간 후 안내 메시지 감춤
+			            setTimeout(function(){
+			                document.querySelector('.review_filename .warning_msg').style.display = 'none';
+			            },1000);    
+			            break;
+			    }
+			}
+	        //별점 선택 안했으면 메시지 표시
+	        if(rating.rate == 0){
+	            rating.showMessage('rate');
+	            return false;
+	        }
+	        if(reviewform.title.value == ""){
+	        	alert("제목을 입력하세요!!!");
+	        	return false;
+	        }
+	        //리뷰 5자 미만이면 메시지 표시
+	        if(document.querySelector('.review_textarea').value.length < 5){
+	            rating.showMessage('review');
+	            return false;
+	        }
+	        if(reviewform.filename.value == ""){
+	        	rating.showMessage('filename');
+	        	return false;
+	        }else{
+	        	reviewform.submit();
+	        }
+	        //폼 서밋
+	}
+ 
     
-    Rating.prototype.showMessage = function(type){//경고메시지 표시
-    switch(type){
-        case 'rate':
-            //안내메시지 표시
-            document.querySelector('.review_rating .warning_msg').style.display = 'block';
-            //지정된 시간 후 안내 메시지 감춤
-            setTimeout(function(){
-                document.querySelector('.review_rating .warning_msg').style.display = 'none';
-            },1000);            
-            break;
-        case 'review':
-            //안내메시지 표시
-            document.querySelector('.review_contents .warning_msg').style.display = 'block';
-            //지정된 시간 후 안내 메시지 감춤
-            setTimeout(function(){
-                document.querySelector('.review_contents .warning_msg').style.display = 'none';
-            },1000);    
-            break;
-    }
-}
+   
 	</script>
 	<div class="courses">
 		<div class="container jm1">
 			<div class="wrap">
 			    <h1>후기</h1>
-			    <form name="reviewform" class="reviewform" method="post" action="/reviewWrite" enctype="multitype/form-data">
+			    <form name="reviewform" class="reviewform" method="post" action="reviewWrite" enctype="multipart/form-data">
 			        <input type="hidden" name="rate" id="rate" value="0"/>
 			        <p class="title_star">별점과 리뷰를 남겨주세요.</p>
 			 
@@ -102,16 +120,20 @@
 			                <label for="rating5"></label>
 			            </div>
 			        </div>
+			        <div style="padding:10px;">
+			        	제목 &nbsp;:&nbsp;&nbsp;&nbsp;<input type="text" name="title" >
+			        </div>
 			        <div class="review_contents">
 			            <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
-			            <textarea rows="10" class="review_textarea"></textarea>
+			            <textarea rows="10" class="review_textarea" name="content"></textarea>
 			        </div>
-			        <div>
+			        <div class="review_filename">
+			        	<div class="warning_msg">사진을 업로드 해주십시오.</div>
 			        	<input type="file" name="filename">
 			        </div>
 			        <div class="cmd" style="display:inline-block; margin-top:50px;">
 			            <input class="load_more_button" style="color: rgba(0,0,0,0.3); font-family: 'Montserrat', sans-serif;font-size: 10px;
-    font-weight: 700; margin-right:50px;" type="button" name="save" id="save" value="등록">
+    font-weight: 700; margin-right:50px;" type="button" name="save" id="save" value="등록" onClick="Gosubmit();">
 			            <div class="load_more_button"><a href="reviews">나가기</a></div>
 			        </div>
 			    </form>
