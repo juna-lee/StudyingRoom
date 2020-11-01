@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="headerbody">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -47,7 +47,7 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="index"><img src="/img/logo.png" alt=""></a>
+                    <a href="index"><img src="/img/tedlogo.png" alt=""></a>
                 </div>
                 <div class="header-right">
                     <img src="/img/icons/search.png" alt="" class="search-trigger">
@@ -64,15 +64,20 @@
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a class="active" href="index">홈</a></li>
-                        <li><a href="/categories.html">예약하기</a>
+                        <li><a href="reservation">예약하기</a>
                             <ul class="sub-menu">
                                 <li><a href="product-page.html">개인좌석</a></li>
                                 <li><a href="shopping-cart.html">스터디룸</a></li>
                             </ul>
                         </li>
-                        <li><a href="/product-page.html">공지사항</a></li>
+                        <li><a href="notice">공지사항</a></li>
                         <li><a href="reviews">리뷰</a></li>
-                        <li><a href="/contact.html">Q&A</a></li>
+                        <li><a href="qna">Q&A</a>
+                         <ul class="sub-menu">
+                                <li><a href="qna">Q&A</a></li>
+                                <li><a href="faq">자주하는질문</a></li>
+                            </ul>
+                         </li>
                     </ul>
                 </nav>
             </div>
@@ -85,19 +90,19 @@
                 <div class="col-md-4">
                     <div class="header-item">
                         <img src="/img/icons/delivery.png" alt="">
-                        <p>Free shipping on orders over $30 in USA</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-lg-center">
                     <div class="header-item">
                         <img src="/img/icons/voucher.png" alt="">
-                        <p>20% Student Discount</p>
+                        <p>20% 할인 정기권 발급 받기</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-xl-right">
                     <div class="header-item">
                     <img src="/img/icons/sales.png" alt="">
-                    <p>30% off on dresses. Use code: 30OFF</p>
+                    <p>즐겨찾기 추가하고 30% 할인 쿠폰 받기</p>
                 </div>
                 </div>
             </div>

@@ -258,7 +258,7 @@ ol {
 /*---------------------
   Header
 -----------------------*/
-body{padding-top:104px;}
+.headerbody{padding-top:104px;}
 .header-section {
 	position: fixed;
 	top: 0;
@@ -2505,4 +2505,71 @@ body {
 .effect6:hover figcaption {
     transform: translatex(0px) rotate(0deg);
     opacity: 1;
+
 }
+
+/* 공지사항 */
+.search_wrap {margin-top:100px;}
+.record_group {float:left;}
+.record_group span {color:#007dc6;}
+.panel_title
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: rgba(0,0,0,0.8);
+	font-weight: 700;
+}
+.search_group {float:right; margin-bottom: 20px;}
+.search_group .select {height:44px; border:1px solid #e0e0e0; padding:5px;}
+.search_group .search_word {height:44px; border:1px solid #e0e0e0; padding:5px; width:220px;}
+.search_group .btn_search {height:44px; padding:5px 15px; border:1px solid #e0e0e0; background:transparent; /*투명하게*/ font-size:16px;vertical-align:bottom;}
+.search_group .btn_write {
+	background: #000;
+	padding: 10px 23px;
+	color: #fff;
+	float: right;
+}
+.panel_title
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: rgba(0,0,0,0.8);
+	font-weight: 700;
+}
+.bord_list {clear:both; padding-top:5px;}
+.bord_table {width:100%;}
+.bord_list th {border-bottom:2px solid #333; text-align:center; color:#000;}
+.bord_table td {border-bottom:1px solid #e0e0e0; padding:15px 5px; text-align:center;}
+.bord_table td.title {text-align:left;}
+.bord_table a{color:#000;}
+.bord_table a i{font-size:17px; padding-right:8px;}
+
+/*paging*/
+.paging {
+	clear: both;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	text-align: center;
+	width: 100%;
+	
+}
+
+.paging a {
+	padding: 8px 10px;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	color: #000;
+}
+
+.paging a.active {
+	background: #000;
+	color: #fff;
+	padding: 8px 13px;
+}
+
+/*faq*/
+
+
+
+

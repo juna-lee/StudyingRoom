@@ -28,7 +28,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_form">
                         <div class="login_part_form_iner">
-                            <h3>로그인<br>
+                            <h3><a href="index"><img src="/img/tedlogo.png"></a><br>
                                 </h3>
                             <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                                 <div class="col-md-12 form-group p_star">

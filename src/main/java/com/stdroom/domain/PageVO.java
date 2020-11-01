@@ -7,7 +7,6 @@ public class PageVO {
 
 	private int startPage;
 	private int endPage;
-	private boolean prev,next;
 	
 	private int total;
 	private Criteria cri;
@@ -24,7 +23,5 @@ public class PageVO {
 		if(realEnd < this.endPage) {
 			this.endPage = realEnd;
 		}
-		this.prev = this.startPage > 1;
-		this.next = this.endPage < realEnd;
 	}
 }

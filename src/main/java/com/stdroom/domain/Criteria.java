@@ -12,7 +12,7 @@ public class Criteria {
 	
 	
 	public Criteria() {
-		this(1,10);
+		this(1,6);
 	}
 	public Criteria(int pageNum, int amount) {
 		this.pageNum = pageNum;
@@ -20,7 +20,7 @@ public class Criteria {
 	}
 	public String getListLink() {
 		UriComponentsBuilder builder = UriComponentsBuilder.fromPath("")
-				.queryParam("pageNum", this.pageNum) //??? 왜 얘만 이렇게 해도되는지 모르겠다 
+				.queryParam("pageNum", this.pageNum) 
 				.queryParam("amount", this.getAmount());
 		return builder.toUriString();
 	}

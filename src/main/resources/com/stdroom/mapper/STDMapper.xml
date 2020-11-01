@@ -8,6 +8,13 @@
 	insert into team_review (bno,rating,content,title,filename) values(team_review_bno_seq.nextval,#{rating},#{content},#{title},#{filename})
 </insert>
 <select id="reviewList" resultType="com.stdroom.domain.ReviewVO">
-	select * from team_review where bno > 0 order by bno desc
+	<![CDATA[
+	select bno,rating,content,title,filename,readcnt from (select rownum rn,bno,rating,content,title,filename,readcnt from team_review where
+	 rownum <= #{pageNum} * #{amount}
+	 ) where rn > 0 order by bno desc
+	]]>
+</select>
+<select id="reviewTotal" resultType="int">
+	select count(*) from team_review where bno > 0
 </select>
 </mapper>

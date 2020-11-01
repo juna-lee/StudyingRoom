@@ -26,6 +26,13 @@
     <section class="page-add">
         <div class="container">
             <div class="row">
+            	<div class="col-lg-12">
+					<div class="page-breadcrumb">
+						<h2 style="text-align: center; padding-bottom:40px;">
+							<a href="index"><img src="/img/tedlogo.png" /></a>
+						</h2>
+					</div>
+				</div>
                 <div class="col-lg-12">
                     <div class="page-breadcrumb">
                         <h2 style="text-align:center;">회원가입<span>.</span></h2>

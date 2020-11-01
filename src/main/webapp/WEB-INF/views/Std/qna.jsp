@@ -12,14 +12,14 @@
 				<div class="row">
 				<div class="col">
 					<div class="record_group">
-						<div class="panel_title">공지사항</div>
+						<div class="panel_title">Q&A</div>
 					</div>
 					</div>
 					</div>
 					<div class="row">
 						<div class="col">
 							<div class="load_more_button float_right " style="float: right; margin-bottom:15px; margin-top:40px">
-								<a href="#">공지사항 작성</a>
+								<a href="#">Q&A 작성</a>
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
 				<!-- search end -->
 				<div class="bord_list">
 					<table class="bord_table" summary="이표는 번호,제목,글쓴이,날자,조회수로 구성되어 있습니다">
-						<caption class="sr-only">공지사항 리스트</caption>
+						<caption class="sr-only">Q&A 리스트</caption>
 						<colgroup>
 							<col width="10%">
 							<col width="5%">

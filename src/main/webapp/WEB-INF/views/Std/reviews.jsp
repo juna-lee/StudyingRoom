@@ -20,7 +20,7 @@
 					<div class="course" style="padding-bottom: 100px;">
 						<div class="course_image"  style="height:100%; width:100%;"><img src="/resources/upload/${list.filename}" alt=""></div>
 						<div class="course_body">
-							<div class="course_title"><a href="review?bno=${list.bno}">${list.title}</a></div>
+							<div class="course_title"><a href="review?bno=${list.bno}&pageNum=${pageMaker.cri.pageNum}&amount=${pageMaker.cri.amount}">${list.title}</a></div>
 							<div class="course_info">
 								<ul>
 									<li><a href="#">권혁성</a></li>
@@ -50,12 +50,16 @@
 					</div>
 				</div>
 				</c:forEach>
-
+			<form id='actionForm' action="reviews" method='get'>
+			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+			<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
+			</form>
 			</div>
 
 			<div class="row">
 				<div class="col">
-					<div class="load_more_button" style=""><a href="#">더보기</a></div>
+					<form></form>
+					<div class="load_more_button" style=""><a href="reviews?pageNum=${pageMaker.cri.pageNum+1}">더보기</a></div>
 					<div class="load_more_button float_right " style="float:right;"><a href="reviewWrite">리뷰작성</a></div>
 				</div>
 			</div>

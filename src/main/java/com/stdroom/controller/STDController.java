@@ -7,12 +7,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.stdroom.domain.Criteria;
+import com.stdroom.domain.PageVO;
 import com.stdroom.domain.ReviewVO;
 import com.stdroom.service.STDService;
 
@@ -32,6 +35,9 @@ public class STDController {
 		log.info("Controller : index............");
 	}
 	
+	
+	
+	
 	@GetMapping("terms")
 	public void terms() {
 		log.info("Controller : terms.............");
@@ -45,32 +51,35 @@ public class STDController {
 	public void login() {
 		log.info("Controller : login.............");
 	}
+	@GetMapping("notice")
+	public void notice() {
+		log.info("Controller : notice...........");
+	}
+	@GetMapping("qna")
+	public void qna() {
+		log.info("Controller :qna...................");
+	}
+	@GetMapping("faq")
+	public void faq() {
+		log.info("Controller : faq.................");
+	}
+	
+	//reviews start
 	
 	@GetMapping("reviews")
-	public void reviews(Model model) {
+	public void reviews(Model model,Criteria cri) {
 		log.info("Controller : review................");
-		model.addAttribute("list",service.reviewList());
+		model.addAttribute("list",service.reviewList(cri));
+		int tot = service.reviewTotal(cri);
+		log.info("tot 은?"+tot);
+		log.info("cri 는?"+cri);
+		model.addAttribute("pageMaker",new PageVO(cri,tot));
 	}
 	@GetMapping("review")
 	public void review() {
 		log.info("Controller : review................");
 
 	}
-
-	@GetMapping("notice")
-	public void Board() {
-		log.info("Controller : Std_notice....공지사항.......");
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@GetMapping("reviewWrite")
 	public void reviewWrite() {
 		log.info("Controller : reviewWrite...............");
@@ -108,4 +117,7 @@ public class STDController {
 		rttr.addFlashAttribute("reviewtrue",reviewtrue);
 		return "redirect:/Std/reviews";
 	}
+	
+	//reviews end
+
 }
